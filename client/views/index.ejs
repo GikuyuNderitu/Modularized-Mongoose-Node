@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Modularization demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Hello Modularization</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>NAME:</th>
+                    <th>COLOR:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i of users) {%>
+                    <tr>
+                        <td><%= i.name  %></td>
+                        <td><%= i.color %></td>
+                    </tr>
+                <%}%>
+            </tbody>
+        </table>
+
+        <form action="/users" method="post">
+            Name: <input type="text" name="name">
+            Color: <input type="text" name="color">
+            <input type="submit">
+        </form>
+    </body>
+</html>
